@@ -1,9 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
+import dummyData from '../dummyData';
+import Card from './Card';
 
-function Main() {
-  return (
-    <div>Main</div>
-  )
-}
+const Main = () => {
+  const [data, setData] = useState(dummyData);
 
-export default Main
+  
+  return <DragDropContext>
+    <div className= "trello">
+      {data.map((section) => (
+        <Droppable key={section.id} droppableId={section.id}>
+          {(provided) => (
+            <div 
+            className="trello-section"
+            ref={provided.innerRef}
+            {...provided.droppableProps}
+            >
+              <div className="trello-section-title">{section.title}</div>
+              <div className="trello-section-content">
+                {section.tasks.map((task, index) => (
+                  <Draggable 
+                  draggableId={task.id} 
+                  index={index} 
+                  key={task.id}
+                  >
+                    <div>
+                      <Card></Card>
+                    </div>
+                  </Draggable>
+                ))}
+              </div>
+            </div>
+          )}
+        </Droppable>
+      ))}
+    </div>
+    </DragDropContext>;
+};
+
+export default Main;
