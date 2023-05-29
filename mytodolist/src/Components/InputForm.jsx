@@ -9,8 +9,15 @@ const InputForm = ({ taskList, setTaskList }) => {
   // handleSubmitの定義
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputText);
-    // inputに入力した文字を表示したい
+    
+    // タスクを追加する
+    setTaskList([
+      ...taskList,
+      {
+        text: inputText
+      }
+    ]);
+    console.log(taskList);
   }
 
   // setInputTextでinput内の文字の状態の管理
