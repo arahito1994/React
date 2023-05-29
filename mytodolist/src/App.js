@@ -13,7 +13,7 @@ function App() {
     <div>
        {/* 必要なコンポーネントを作成 */}
       <Title />
-      <InputForm />
+      <InputForm taskList={taskList} setTaskList={setTaskList}/>
       <TodoList />
     </div>
   );
