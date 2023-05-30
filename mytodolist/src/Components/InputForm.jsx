@@ -17,7 +17,6 @@ const InputForm = ({ taskList, setTaskList }) => {
         text: inputText
       }
     ]);
-    console.log(taskList);
   }
 
   // setInputTextでinput内の文字の状態の管理
