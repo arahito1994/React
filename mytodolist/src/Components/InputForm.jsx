@@ -14,6 +14,7 @@ const InputForm = ({ taskList, setTaskList }) => {
     setTaskList([
       ...taskList,
       {
+        id: taskList.length + 1,
         text: inputText
       }
     ]);
