@@ -5,8 +5,8 @@ const TodoList = ({ taskList, setTaskList }) => {
     // todoを表示するエリアを作成する
     <div className='todos'>
       <div className='todos'>
-        {taskList.map(task => (
-          <div className='todo'>
+        {taskList.map((task, index)=> (
+          <div className='todo' key={index}>
           <div className='todoText'>
           <p>  
             <input type='checkbox'></input>
