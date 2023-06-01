@@ -18,8 +18,6 @@ const InputForm = ({ taskList, setTaskList }) => {
         text: inputText
       }
     ]);
-    // 入力した文字を消す。
-    setInputText("")
   }
 
   // setInputTextでinput内の文字の状態の管理
@@ -32,7 +30,7 @@ const InputForm = ({ taskList, setTaskList }) => {
     <div>
       {/* フォームに入力した文字を取得する */}
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} value={inputText}></input>
+        <input type="text" onChange={handleChange}></input>
         <button>投稿用ボタン</button>
         <button>削除用ボタン</button>
       </form>
