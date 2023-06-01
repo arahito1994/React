@@ -1,6 +1,12 @@
 import React from 'react'
 
 const TodoList = ({ taskList, setTaskList }) => {
+
+  const handleDelete = (id) => {
+    // タスクを削除する
+    setTaskList(taskList.filter((task) => task.id !== id));
+  }
+
   return (
     // todoを表示するエリアを作成する
     <div className='todos'>
@@ -11,7 +17,7 @@ const TodoList = ({ taskList, setTaskList }) => {
           <p>  
             <input type='checkbox'></input>
               <span>{task.text}</span>
-            <button>タスク削除用ボタン</button>
+            <button onClick={() => handleDelete(task.id)}>タスク削除用ボタン</button>
           </p>
           </div>
         </div>
