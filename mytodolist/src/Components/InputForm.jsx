@@ -19,7 +19,7 @@ const InputForm = ({ taskList, setTaskList }) => {
       }
     ]);
     // 入力した文字の削除
-    setInputText=("")
+    setInputText('')
   }
 
   // setInputTextでinput内の文字の状態の管理
