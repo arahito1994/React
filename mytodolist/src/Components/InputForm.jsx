@@ -15,7 +15,8 @@ const InputForm = ({ taskList, setTaskList }) => {
       ...taskList,
       {
         id: taskList.length + 1,
-        text: inputText
+        text: inputText,
+        completed: false
       }
     ]);
     // 入力した文字の削除
