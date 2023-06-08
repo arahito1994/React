@@ -29,14 +29,18 @@ const InputForm = ({ taskList, setTaskList }) => {
     
   }
 
+  const handleClear = (e) => {
+    setInputText(e.target.value);
+  }
+
   return (
     <div>
       {/* フォームに入力した文字を取得する */}
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleChange} value={inputText}></input>
         <button>投稿用ボタン</button>
-        <button>削除用ボタン</button>
       </form>
+        <button onClick={handleClear} value={""}>削除用ボタン</button>
     </div>
   )
 }
