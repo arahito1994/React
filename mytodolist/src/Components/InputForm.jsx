@@ -14,9 +14,13 @@ const InputForm = ({ taskList, setTaskList }) => {
     setTaskList([
       ...taskList,
       {
-        text: inputText
+        id: taskList.length + 1,
+        text: inputText,
+        completed: false
       }
     ]);
+    // 入力した文字の削除
+    setInputText('')
   }
 
   // setInputTextでinput内の文字の状態の管理
@@ -25,14 +29,18 @@ const InputForm = ({ taskList, setTaskList }) => {
     
   }
 
+  const handleClear = (e) => {
+    setInputText(e.target.value);
+  }
+
   return (
     <div>
       {/* フォームに入力した文字を取得する */}
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange}></input>
+        <input type="text" onChange={handleChange} value={inputText}></input>
         <button>投稿用ボタン</button>
-        <button>削除用ボタン</button>
       </form>
+        <button onClick={handleClear} value={""}>削除用ボタン</button>
     </div>
   )
 }
