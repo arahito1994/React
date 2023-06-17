@@ -12,9 +12,8 @@ import PostPage from './PostPage';
 function App() {
   return (
     <div className="App">
-      <h1>作成開始</h1>
       <Router>
-        <Header />
+        <Header title="ReactBlogApp"/>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/post" element={<NewPost />} />
