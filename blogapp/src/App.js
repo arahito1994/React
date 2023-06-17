@@ -22,7 +22,7 @@ function App() {
             <Route path="/delete" element={<Delete />} />
             <Route path="/*" element={<Other />} />
         </Routes>
-        <Footer />
+        <Footer copy="Copyright ©️"/>
       </Router>
     </div>
   );

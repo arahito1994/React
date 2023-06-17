@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer = ({ copy }) => {
   return (
-    <div>Footer</div>
+    <footer className="Footer">
+      <h3>{copy}</h3>
+    </footer>
   )
 }
 
