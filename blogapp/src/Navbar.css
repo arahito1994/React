@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  background-color: crimson;
+  padding: auto;
+  margin-top: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s;
+}
+
+nav a:hover{
+  color: azure;
+}
