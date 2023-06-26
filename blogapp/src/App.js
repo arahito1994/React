@@ -5,6 +5,7 @@ import Edit from './Edit';
 import Footer from './Footer';
 import Header from './Header';
 import Home from './Home';
+import Login from './Login';
 import Navbar from './Navbar';
 import NewPost from './NewPost';
 import Other from './Other';
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/" element={<Login />} />
             <Route path="/post" element={<NewPost />} />
             <Route path="/post/:id" element={<PostPage />} />
             <Route path="/edit" element={<Edit />} />
@@ -28,6 +30,7 @@ function App() {
         <Footer copy="Copyright ©️"/>
       </Router>
     </div>
+    
   );
 
 }
