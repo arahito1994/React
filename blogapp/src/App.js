@@ -20,7 +20,7 @@ function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/post" element={<NewPost />} />
             <Route path="/post/:id" element={<PostPage />} />
             <Route path="/edit" element={<Edit />} />
